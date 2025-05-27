@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyst and Dev Oliver</title>
+    
+    <!-- Fontes do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&family=Oxanium:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/especialidades.png">
+    
+    <!-- Estilo CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const secao = document.querySelector('.primeira-secao');
+      
+          if (secao) {
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('visivel');
+                } else {
+                  entry.target.classList.remove('visivel');
+                }
+              });
+            }, {
+              threshold: 0.2
+            });
+      
+            observer.observe(secao);
+          } else {
+            console.error('Elemento .primeira-secao não encontrado');
+          }
+        });
+      </script>
+
+    <header>
+        <div class="container-logo">
+            <!-- Logo HOME -->
+            <div class="logo-imagem">
+                <a href="#">
+                    <img src="img/especialidades.png" alt="Logotipo">
+                </a>
+            </div>
+            
+            <!-- Logo texto (NOME DO SITE NA PARTE ESQUERDA) -->
+            <h3 class="logo-texto">
+                <span class="the-texto">Oliver | Dev & Analyst</span>
+            </h3>
+        
+            <!-- Menu de navegação parte direita tela -->
+            <nav class="menu-navegacao">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#especialidades">Skills</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        
+        <!-- Ícone do Hambúrguer -->
+        <div class="hamburger" onclick="toggleSidebar()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+    </header>
+
+    <!-- Aba Lateral Esquerda -->
+
+    <!-- DESATIVADA TEMPORARIAMENTE!!!!!
+   <div class="sidebar">
+        <ul>
+            <li><a href="#">Quem é Oliver?</a></li>
+            <li><a href="#">Especialidades</a></li>
+            <li><a href="#">Conheça meus projetos</a></li>
+            <li><a href="#">Contatos</a></li>
+        </ul>
+    </div>
+   -->
+
+    <!-- Texto Central -->
+    <div class="texto-central" id="textoCentral">
+        <h1 class="typewriter">Seja bem-vindo ao meu portfólio</h1>
+        <br>
+        <h2 class="typewriter">Sou Oliver Casto, Analista e Dev </h2>
+        <br>
+        <p class="typewriter">Saiba mais sobre mim nos cards</p>
+    </div>
+
+    <!-- Partículas -->
+    <div id="particles-js"></div>
+
+    <!-- Container de Cards -->
+    <div class="container" id="cardContainer">
+
+        <!-- Card 1: Quem é Oliver -->
+        <div class="card">
+            <img src="img/iconoliver.jpg" alt="Circle img">
+            <div class="content">
+                <h2></h2>
+                <h1>Quem é Oliver?</h1>
+                <br>
+                <p>Sou um desenvolvedor de software. Apaixonado por tecnologia e focado em soluções empresariais.</p>
+                <a href="#sobremim">Minha história</a>
+            </div>
+        </div>
+
+        <!-- Card 2: Especialidades -->
+        <div class="card card2">
+            <img src="img/especialidades.png" alt="Circle img">
+            <div class="content">
+                <h2></h2>
+                <h3>Especialidades</h3>
+                <p>Desenvolvimento de Softwares, Testes e QA de Softwares, Gestão e projetos de TI, Infraestrutura de Redes...</p>
+                <a href="#especialidades">Saiba mais</a>
+            </div>
+        </div>
+
+        <!-- Card 3: Projetos -->
+        <div class="card card3">
+            <img src="img/projetos.png" alt="Circle img">
+            <div class="content">
+                <h2></h2>
+                <h3>Projetos</h3>
+                <p>Acesse todos os meus projetos no botão abaixo</p>
+                <a href="#projetos">ACESSAR</a>
+            </div>
+        </div>  
+     </div>
+
+
+     <!-- PRIMEIRA SEC - SOBRE MIM -->
+     <section id="sobremim" class="primeira-secao">
+        <div class="sobre-content">
+          <div class="texto">
+            <h1>Quem é Oliver?</h1>
+            <p>
+              Sou Oliver Casto, apaixonado por tecnologia desde criança. Decidi transformar essa paixão em carreira e hoje curso Análise e Desenvolvimento de Sistemas.
+            </p>
+            <p>
+              Aqui, desenvolvo habilidades técnicas para criar soluções práticas e inovadoras. Gosto de desafios e busco sempre evoluir para entregar o melhor em cada projeto.
+            </p>
+            <a href="#contato" class="btn-contato">Entre em contato</a>
+          </div>
+          <div class="imagemsecao">
+            <img src="img/iconoliver.jpg" alt="Oliver Casto" />
+          </div>
+        </div>
+      </section>
+
+      <section id="especialidades" class="primeira-secao">
+        <div class="sobre-content">
+          <div class="texto">
+            <h1>Especialidades</h1>
+            <p>
+              Desenvolvimento de Softwares, Testes e QA de Softwares, Gestão e Projetos de TI, Infraestrutura de Redes e mais.
+            </p>
+            <p>
+              Atuo com ferramentas modernas e tecnologias eficientes para garantir performance, qualidade e inovação em cada entrega.
+            </p>
+      
+            <div class="tecnologias">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" title="Linux">
+            </div>
+          </div>
+          <div class="imagemsecao">
+            <img src="img/especialidades.png" alt="Tecnologia" />
+          </div>
+        </div>
+      </section>
+      
+      <section id="projetos" class="primeira-secao">
+        <div class="sobre-content">
+          <div class="texto">
+            <h1>Projetos</h1>
+            <p>
+              Ao longo da minha jornada, desenvolvi projetos que envolvem desde aplicações web completas até automações de testes, documentação técnica e infraestrutura de redes.
+            </p>
+      
+            <ul class="lista-projetos">
+              <li>🔹 Sistemas Web com autenticação segura</li>
+              <li>🔹 APIs RESTful com documentação Swagger</li>
+              <li>🔹 Testes automatizados com Selenium e JUnit</li>
+              <li>🔹 Dashboards com dados em tempo real</li>
+              <li>🔹 Scripts Python para automação de tarefas</li>
+              <li>🔹 Implantação de servidores e redes locais</li>
+              <li>🔹 Gerenciamento de projetos com Metodologias Ágeis (Scrum/Kanban)</li>
+            </ul>
+          </div>
+      
+          <div class="imagemsecao">
+            <img src="img/projetos2.png" alt="Projetos de TI" />
+          </div>
+        </div>
+      </section>
+      
+
+      <!-- Modal de Mensagem -->
+<div id="modalMensagem" class="modal">
+  <div class="modal-content">
+    <span id="fecharModal" class="fechar">&times;</span>
+    <p id="textoModal"></p>
+  </div>
+</div>
+
+      <section id="contato" class="primeira-secao">
+        <div class="sobre-content">
+          <div class="texto">
+            <h1>Entre em Contato</h1>
+            <p>
+              Tem um projeto em mente ou quer bater um papo sobre tecnologia? Preencha o formulário abaixo e retornarei o mais rápido possível!
+            </p>
+      
+            <form class="formulario-contato" action="enviar-email.php" method="POST">
+              <input type="text" name="nome" placeholder="Seu nome" required>
+              <input type="email" name="email" placeholder="Seu e-mail" required>
+              <input type="text" name="assunto" placeholder="Assunto" required>
+              <textarea name="mensagem" rows="5" placeholder="Sua mensagem..." required></textarea>
+              <button type="submit">Enviar mensagem</button>
+            </form>
+          </div>
+      
+          <div class="imagemsecao">
+            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Fale comigo">
+          </div>
+        </div>
+      </section>
+      
+      
+
+
+
+
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        // Efeito de tilt nos cards
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1
+        });
+    
+        // Chama os elementos
+        const texto = document.getElementById('textoCentral');
+        const container = document.getElementById('cardContainer');
+    
+        // Quando rolar mais de 50px, o texto some
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                texto.classList.add('hidden');
+            } else {
+                texto.classList.remove('hidden');
+            }
+        });
+
+        // Função para abrir/fechar a sidebar
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            // Verifica a posição atual e alterna entre abrir/fechar
+            if (sidebar.style.transform === 'translateX(0%)') {
+                sidebar.style.transform = 'translateX(-100%)';
+            } else {
+                sidebar.style.transform = 'translateX(0%)';
+            }
+        }
+    </script>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="redes-sociais">
+            <a href="https://www.instagram.com/oliver29s" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" alt="Instagram" width="20" height="20">
+                @oliver29s
+            </a>
+        </div>
+        <div class="copyright">
+            &copy; Oliver Casto, 2025 Todos os direitos reservados.
+        </div>
+    </footer>
+
+</body>
+</html>
