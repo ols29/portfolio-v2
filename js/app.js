@@ -80,14 +80,15 @@ document.addEventListener("DOMContentLoaded", () => {
           body: formData
         });
 
-        const text = await response.text();
-        textoModal.textContent = text;
-        modal.style.display = 'flex';  // aqui o correto para centralizar modal
-        if (response.ok) form.reset();
+        const data = await response.json();
+
+        textoModal.textContent = data.message;
+        modal.style.display = 'flex';
+        if (response.ok && data.success) form.reset();
 
       } catch (error) {
         textoModal.textContent = "Erro na conexão. Tente novamente.";
-        modal.style.display = 'flex';  // mantém o padrão
+        modal.style.display = 'flex';
         console.error(error);
       }
     });
